@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons i {
+    font-size: 25px;
+    color: #dcdcdc;
+    transition: .3s;
+}
+
+.social-icons i:hover {
+    color: #d77bff;
+    transform: scale(1.2);
+}
+
+/* Labeled Social Icons */
+.labeled {
+    margin-top: 30px;
+    gap: 40px;
+}
+
+.icon-box {
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon-box i {
+    font-size: 36px;
+    color: white;
+    transition: .3s;
+}
+
+.icon-box span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #e5caff;
+}
+
+.icon-box:hover i {
+    color: #d77bff;
+    transform: scale(1.2);
+}
+
+/* Responsive Fix */
+@media(max-width: 600px) {
+    .labeled {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #080013;
+    color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Background glowing floating shapes */
+.bg-shapes .shape {
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background: rgba(200, 100, 255, 0.2);
+    animation: float 8s infinite alternate ease-in-out;
+    filter: blur(10px);
+}
+
+.shape:nth-child(1) {
+    top: 12%;
+    left: 10%;
+}
+
+.shape:nth-child(2) {
+    top: 40%;
+    left: 70%;
+    animation-duration: 12s;
+}
+
+.shape:nth-child(3) {
+    top: 75%;
+    left: 5%;
+    animation-duration: 10s;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-35px);
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(225, 130, 255, 0.4);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #d77bff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #d77bff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.hero-img {
+    width: 280px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 0px 25px #d77bff);
+    border-radius: 150px;
+}
+
+.highlight {
+    color: #d77bff;
+}
+
+.glow-text {
+    font-size: 42px;
+    font-weight: 800;
+    animation: neonGlow 2s infinite alternate;
+}
+
+.typing {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #eabaff;
+}
+
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0px 0px 10px #d77bff;
+    }
+
+    100% {
+        text-shadow: 0px 0px 30px #ff73f3, 0px 0px 60px #ad36ff;
+    }
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+    transition: .3s;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+.glass-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid #d77bff;
+    backdrop-filter: blur(10px);
+}
+
+.pulse {
+    animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px #d77bff;
+    }
+
+    50% {
+        box-shadow: 0 0 30px #ac46ff;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #d77bff;
+    }
+}
+
+/* Social Icons */
+.social-icons i {
+    margin: 0 10px;
+    font-size: 22px;
+    transition: .3s;
+}
+
+.social-icons i:hover {
+    transform: scale(1.2);
+    color: #d77bff;
+}
+
+/* Sections */
+.container-section {
+    padding: 85px 50px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 34px;
+    color: #d77bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Glass Containers */
+.glass {
+    width: 85%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid #c17bff;
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 18px;
+    line-height: 28px;
+}
+
+/* Skills */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.skill-card {
+    background: #120026;
+    padding: 12px 22px;
+    border-radius: 14px;
+    transition: .3s;
+    cursor: pointer;
+    border: 1px solid rgba(200, 100, 255, 0.3);
+}
+
+.skill-card:hover {
+    background: #d77bff;
+    transform: scale(1.1);
+}
+
+/* Projects */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.project-card {
+    width: 300px;
+    background: #1a0030;
+    border-radius: 16px;
+    padding: 18px;
+    transition: .4s;
+    border: 1px solid rgba(200, 100, 255, 0.4);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px #d77bff;
+}
+
+/* Certifications */
+.cert-list {
+    list-style: none;
+    font-size: 18px;
+    line-height: 38px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #0e0020;
+    color: #d9baff;
+    margin-top: 40px;
+}
+
+/* 3D Hover Tilt Effect */
+.tilt-effect {
+    transform-style: preserve-3d;
+    transition: 0.4s ease-in-out;
+}
+
+.tilt-effect:hover {
+    transform: perspective(600px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+    box-shadow: 0px 0px 25px #d77bff;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .hero-img {
+        width: 220px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .glass {
+        width: 95%;
+    }
+}
